@@ -1,10 +1,10 @@
 """This module has functionality to send error screenshots via smtp."""
 
-import smtplib
-from email.message import EmailMessage
 import base64
-import traceback
+from email.message import EmailMessage
 from io import BytesIO
+import smtplib
+import traceback
 
 from PIL import ImageGrab
 

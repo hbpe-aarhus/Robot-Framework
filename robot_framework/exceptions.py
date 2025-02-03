@@ -5,8 +5,7 @@ import traceback
 from OpenOrchestrator.database.queues import QueueElement, QueueStatus
 from OpenOrchestrator.orchestrator_connection.connection import OrchestratorConnection
 
-from robot_framework import config
-from robot_framework import error_screenshot
+from robot_framework import config, error_screenshot
 
 
 class BusinessError(Exception):

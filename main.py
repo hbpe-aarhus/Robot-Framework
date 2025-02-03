@@ -2,8 +2,8 @@
 a virtual environment and then start the actual process.
 """
 
-import subprocess
 import os
+import subprocess
 import sys
 
 script_directory = os.path.dirname(os.path.realpath(__file__))

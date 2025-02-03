@@ -1,7 +1,7 @@
 """This module contains the main process of the robot."""
 
-from OpenOrchestrator.orchestrator_connection.connection import OrchestratorConnection
 from OpenOrchestrator.database.queues import QueueElement
+from OpenOrchestrator.orchestrator_connection.connection import OrchestratorConnection
 
 
 # pylint: disable-next=unused-argument
