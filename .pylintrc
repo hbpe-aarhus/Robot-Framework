@@ -1,5 +1,5 @@
 [pylint.messages_control]
-disable = 
+disable =
   C0301, # Line too long
   I1101, E1101, # C-modules members
   R0913, # Too many arguments
