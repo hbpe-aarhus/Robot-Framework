@@ -1,0 +1,38 @@
+name: pre-commit autoupdate
+
+on:
+  # Every Tuesday at 13:00 UTC
+  schedule:
+    - cron: "0 13 * * 3"
+  # On-demand trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch full history for pre-commit updates
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Run pre-commit autoupdate
+        uses: browniebroke/pre-commit-autoupdate-action@main
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: update/pre-commit-hooks
+          title: "Update pre-commit hooks"
+          commit-message: "Update pre-commit hooks"
+          body: "Update versions of pre-commit hooks to the latest version."
+          delete-branch: true  # Automatically delete branch after merge
