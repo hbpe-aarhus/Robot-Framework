@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # Fetch full history for pre-commit updates
+          fetch-depth: 0  # Fetch full history for pre-commit updates
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -35,4 +35,4 @@ jobs:
           title: "Update pre-commit hooks"
           commit-message: "Update pre-commit hooks"
           body: "Update versions of pre-commit hooks to the latest version."
-          delete-branch: true # Automatically delete branch after merge
+          delete-branch: true  # Automatically delete branch after merge
