@@ -1,9 +1,9 @@
 name: pre-commit autoupdate
 
 on:
-  # Every Tuesday at 13:00 UTC
+  # Every 15th day of the month at 12:00 UTC
   schedule:
-    - cron: "0 13 * * 3"
+    - cron: "0 12 15 * *"
   # On-demand trigger
   workflow_dispatch:
 
